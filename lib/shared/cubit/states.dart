@@ -44,3 +44,13 @@ class NewsGetSearchErrorState extends NewsStates {
   NewsGetSearchErrorState(this.error);
 }
 
+class NewsWebViewLoadingState extends NewsStates {}
+
+class NewsWebViewSuccessState extends NewsStates {}
+
+class NewsWebViewErrorState extends NewsStates {
+  final String error;
+
+  NewsWebViewErrorState(this.error);
+}
+

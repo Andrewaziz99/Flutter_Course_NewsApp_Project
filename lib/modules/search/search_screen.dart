@@ -40,7 +40,7 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: newsBuilder(list, context),
+                child: newsBuilder(list, context, isSearch: true),
               ),
             ],
           ),

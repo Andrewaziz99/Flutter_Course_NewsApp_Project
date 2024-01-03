@@ -70,7 +70,7 @@ class NewsCubit extends Cubit<NewsStates> {
       query: {
         'country': 'eg',
         'category': 'business',
-        'apiKey': 'c18a2c6490ff4cb8a4f8b4c100321c52',
+        'apiKey': '4034052be2c943e581d906aa2bbc6de2',
       },
     ).then((value) {
       businessNews = value.data['articles'];
@@ -84,6 +84,7 @@ class NewsCubit extends Cubit<NewsStates> {
     emit(NewsGetBusinessSuccessState());
   }
 
+
   void getSportsNews() {
     emit(NewsGetSportsLoadingState());
     DioHelper.getData(
@@ -91,7 +92,7 @@ class NewsCubit extends Cubit<NewsStates> {
       query: {
         'country': 'eg',
         'category': 'sports',
-        'apiKey': 'c18a2c6490ff4cb8a4f8b4c100321c52',
+        'apiKey': '4034052be2c943e581d906aa2bbc6de2',
       },
     ).then((value) {
       sportsNews = value.data['articles'];
@@ -111,7 +112,7 @@ class NewsCubit extends Cubit<NewsStates> {
       query: {
         'country': 'eg',
         'category': 'science',
-        'apiKey': 'c18a2c6490ff4cb8a4f8b4c100321c52',
+        'apiKey': '4034052be2c943e581d906aa2bbc6de2',
       },
     ).then((value) {
       scienceNews = value.data['articles'];
@@ -134,7 +135,7 @@ class NewsCubit extends Cubit<NewsStates> {
       url: 'v2/everything',
       query: {
         'q': '$value',
-        'apiKey': 'c18a2c6490ff4cb8a4f8b4c100321c52',
+        'apiKey': '4034052be2c943e581d906aa2bbc6de2',
       },
     ).then((value) {
       search = value.data['articles'];
@@ -146,5 +147,7 @@ class NewsCubit extends Cubit<NewsStates> {
     });
     emit(NewsGetSearchSuccessState());
   }
+
+
 
 }

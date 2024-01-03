@@ -8,6 +8,8 @@ class DioHelper {
       BaseOptions(
         baseUrl: 'https://newsapi.org/',
         receiveDataWhenStatusError: true,
+        connectTimeout: Duration(seconds: 30),
+        receiveTimeout: Duration(seconds: 30),
       ),
     );
   }
